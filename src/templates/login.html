@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login and Signup Form</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="loginStyle.css">
 </head>
 <body>
     <div class="container">
@@ -24,9 +24,10 @@
                     <input id="password" placeholder="Password" class="input-field" type="password"/>
                     <span class="toggle-password" onclick="togglePassword()">👁️</span>
                 </div>
-
+                
                 <!-- Login button -->
-                <button class="button login-button">Login</button>
+                <button type="button" class="button login-button" onclick="login()">Login</button>
+
 
                 <!-- Forgot password link -->
                 <a href="#" class="forgot-password">Forgot Password?</a>
@@ -49,9 +50,13 @@
                 passwordField.type = "text";
                 toggleIcon.textContent = "🙈"; 
             } else {
-                passwordField.type = "password";
+                passwordField.type = "password"
                 toggleIcon.textContent = "👁️"; 
             }
+        }
+        // Redirect to index page
+        function login() {
+            window.location.href = "dashboard.html";
         }
     </script>
 </body>
