@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>College ERP Dashboard</title>
-    <link rel="stylesheet" href="dashboardStyle.css">
+    <link rel="stylesheet" href="/College-ERP/src/resources/static/css/dashboardStyle.css">
 </head>
 <body>
     <div class="dashboard-container">
         <!-- Sidebar -->
         <aside class="sidebar">
             <div class="sidebar-header">
-                <h2>College ERP</h2>
+                <h2>College Name</h2>
             </div>
             <ul class="sidebar-menu">
                 <li><a href="#profile">Profile</a></li>
@@ -31,7 +31,7 @@
                 <h1>Welcome to the Dashboard</h1>
                 <div class="user-info">
                     <span>Hello, Student Name</span>
-                    <button class="logout-btn">Logout</button>
+                    <button type="button" class="logout-btn" onclick="logout()">Logout</button>
                 </div>
             </header>
 
@@ -86,5 +86,12 @@
             </section>
         </main>
     </div>
+
+    <script>
+        // Redirect to login page
+        function logout() {
+            window.location.href = "login.html";
+        }
+    </script>
 </body>
 </html>
